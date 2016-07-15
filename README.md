@@ -24,14 +24,30 @@ You can also use the [Kitematic GUI](https://kitematic.com/) and search for `nat
 
 ## Connect
 
-You can now use `psql` or any other PostgreSQL client to connect to the PostGIS database.
+You can now use `psql` or any other PostgreSQL client to connect to the PostGIS database `naturalearth`.
+Use the user `naturalearth` with the password `naturalearth`.
 
 ```bash
-psql
+psql --host localhost --user naturalearth --db naturalearth --password
+```
+
+ Setting    | Value       
+------------|-------------
+Database    | `naturalearth`
+User        | `naturalearth`
+Password    | `naturalearth`
+
+### Run alongside existing PostgreSQL
+
+If you run the container on your local host and there is already PostgreSQL database running you can
+map the container to a different port.
+
+```bash
+docker run -p 5433:5432 lukasmartinelli/natural-earth-postgis
+psql --host localhost --port 5433 --user naturalearth --db naturalearth --password
 ```
 
 ## Postgis Editor
 
 To get started analyzing the data I recommend to use [**postgis-studio**](https://github.com/lukasmartinelli/postgis-editor).
-
 
