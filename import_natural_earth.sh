@@ -23,7 +23,7 @@ function import_natural_earth() {
     -s_srs EPSG:4326 \
     -t_srs EPSG:3857 \
     -clipsrc -180.1 -85.0511 180.1 85.0511 \
-    PG:"dbname=$NE_DB user=$NE_USER host=$DB_HOST port=$DB_PORT" password="$NE_PASSWORD"\
+    PG:"dbname=$NE_DB user=$NE_USER password=$NE_PASSWORD"\
     -lco GEOMETRY_NAME=geom \
     -lco DIM=2 \
     -nlt GEOMETRY \
