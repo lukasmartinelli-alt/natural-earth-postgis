@@ -46,6 +46,19 @@ map the container to a different port.
 docker run -p 5433:5432 lukasmartinelli/natural-earth-postgis
 psql --host localhost --port 5433 --user naturalearth --db naturalearth --password
 ```
+## Import natural earth data to local postgres DB
+
+If you want to import data to local postgres DB then you can specify those parameters in db_properties.properties file like 
+
+ Property   | DESCRIPTION       
+------------|-------------
+NE_SCHEMA   | Schema in which data will be imported
+NE_PASSWORD | host db password
+NE_USER     | host db user
+NE_HOST     | host name where postgres is running
+NE_DB	    | Database to be used for import
+
+By default these properties are pointing to docker postgis and naturalearth DB.
 
 ## Postgis Editor
 
