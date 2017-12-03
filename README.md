@@ -1,4 +1,6 @@
-## Natural Earth PostGIS database
+## Natural Earth PostGIS database ![stability-deprecated](https://img.shields.io/badge/stability-deprecated-red.svg)
+
+> :warning: This repository is no longer maintained by Lukas Martinelli.
 
 A [PostGIS](http://postgis.net/) Docker container populated with Natural Earth data.
 You can use this to quickly spin up a PostGIS database
