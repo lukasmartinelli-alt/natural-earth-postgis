@@ -15,3 +15,4 @@ RUN wget --quiet http://naciscdn.org/naturalearth/packages/natural_earth_vector.
 
 RUN mv /docker-entrypoint-initdb.d/postgis.sh /docker-entrypoint-initdb.d/10_postgis.sh
 COPY import_natural_earth.sh /docker-entrypoint-initdb.d/20_import_natural_earth.sh
+COPY db_properties.properties /docker-entrypoint-initdb.d/db_properties.properties
